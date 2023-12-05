@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:52:13 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/05 17:52:46 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:26:47 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(void)
 	cin >> N;
 	if (N < 1)
 		return (0);
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << "What do you want to name the zombies > ";
 	getline(cin, name);
 	Zombie *horde = zombieHorde(N, name);
