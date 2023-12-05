@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 13:50:48 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/04 18:25:58 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/05 12:11:51 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void	Phonebook::addContact()
 		index = nbrOfContacts;
 	
 	std::cout << "Please enter the contacts first name: ";
-	std::getline(std::cin, input);
+	while (input.empty())
+		std::getline(std::cin, input);
 	contacts[index].setFirstName(input);
 
 	std::cout << "Please enter the contacts last name: ";
@@ -64,7 +65,7 @@ void	Phonebook::addContact()
 		nbrOfContacts++;
 	}
 	else
-		std::cout << "Contact was succesfully added, replacing contact: " << index << std::endl;
+		std::cout << "Contact was succesfully added, replacing contact: " << index + 1 << std::endl;
 }
 
 void	Phonebook::searchContact()

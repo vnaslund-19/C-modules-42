@@ -12,8 +12,6 @@
 
 #include "phonebook.hpp"
 
-// Add check for empty input !!!
-
 int	main(void)
 {
 	Phonebook	phonebook;
