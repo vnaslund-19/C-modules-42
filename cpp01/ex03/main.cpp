@@ -6,11 +6,12 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:38:05 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/05 18:39:17 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/06 13:10:32 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+# include "HumanA.hpp"
+# include "HumanB.hpp"
 
 int main()
 {
