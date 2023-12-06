@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 13:29:50 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/06 15:01:14 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:46:46 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,22 @@ int	replace(char **av, string content)
 {
 	ofstream	outfile;
 	int			i = 0;
+	string	s1 = av[2];
+	string	s2 = av[3];
+	string	newContent;
 
-	while ((i = content.find(av[2], i)) != string::npos)
+	while (i < content.length())
 	{
-		content.replace(i, strlen(av[2]), av[3]);
-		i += strlen(av[3]);
+		if (content.substr(i, s1.length()) == s1)
+		{
+			newContent += s2;
+			i += s1.length();
+		}
+		else
+		{
+			newContent += content[i];
+			i++;
+		}
 	}
 
 	outfile.open((string)av[1] + ".replace");
@@ -59,7 +70,7 @@ int	replace(char **av, string content)
 		cout << "Error creating outfile" << endl;
 		return (1);
 	}
-	outfile << content;
+	outfile << newContent;
 	outfile.close();
 	cout << "Replacement complete! Result stored in file " << av[1] << ".replace" << endl;
 	return (0);
