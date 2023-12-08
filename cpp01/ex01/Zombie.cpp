@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 13:58:49 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/05 17:46:02 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 13:37:11 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie::Zombie()
 
 }
 
-Zombie::Zombie(string str)
+Zombie::Zombie(std::string str)
 {
 	_name = str;
 }
@@ -29,5 +29,5 @@ Zombie::~Zombie()
 
 void	Zombie::announce(void)
 {
-	cout << _name << ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

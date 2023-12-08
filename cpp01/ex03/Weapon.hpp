@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:23:01 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/06 13:11:59 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:02:46 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,18 @@
 
 # include <iostream>
 
-using namespace std;
-
 class Weapon
 {
 	public:
 		Weapon();
-		Weapon(string weapon);
+		Weapon(std::string weapon);
 		~Weapon();
 
-		const string&	getType();
-		void			setType(string type);
+		const std::string&	getType();
+		void				setType(std::string type);
 
 	private:
-		string	_type;
+		std::string	_type;
 };
 
 #endif

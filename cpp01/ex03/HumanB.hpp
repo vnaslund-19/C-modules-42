@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 13:00:18 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/06 13:22:13 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 13:42:42 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 
 #include "Weapon.hpp"
 
-using namespace std;
-
 class HumanB
 {
 	public:
-		HumanB(string name);
+		HumanB(std::string name);
 		~HumanB();
 
 		void	attack(void);
 		void	setWeapon(Weapon &weapon);
 	private:
 		Weapon*	_weapon;
-		string	_name;
+		std::string	_name;
 };
 
 #endif

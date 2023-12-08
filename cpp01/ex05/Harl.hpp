@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:55:14 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/06 17:05:57 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:09:56 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 # define HARL_HPP
 
 # include <iostream>
-using namespace std;
 
 class Harl
 {
 	public:
 		Harl();
 		~Harl();
-		void	complain(string level);
+		void	complain(std::string level);
 
 	private:
 		void	debug(void);

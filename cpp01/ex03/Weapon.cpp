@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:33:56 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/05 18:44:30 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:03:32 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon()
 
 }
 
-Weapon::Weapon(string weapon)
+Weapon::Weapon(std::string weapon)
 {
 	_type = weapon;
 }
@@ -27,12 +27,12 @@ Weapon::~Weapon()
 	
 }
 
-void	Weapon::setType(string type)
+void	Weapon::setType(std::string type)
 {
 	_type = type;
 }
 
-const string&	Weapon::getType(void)
+const std::string&	Weapon::getType(void)
 {
 	return (_type);
 }

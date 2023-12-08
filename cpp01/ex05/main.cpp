@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:54:26 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/06 17:40:25 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:11:50 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ int	main(void)
 {
 	Harl karen;
 	
-	cout << "Calling Harl.complain(DEBUG):" << endl;
+	std::cout << "Calling Harl.complain(DEBUG):" << std::endl;
 	karen.complain("DEBUG");
 
-	cout << "\nCalling Harl.complain(INFO):" << endl;
+	std::cout << "\nCalling Harl.complain(INFO):" << std::endl;
 	karen.complain("INFO");
 
-	cout << "\nCalling Harl.complain(WARNING):" << endl;
+	std::cout << "\nCalling Harl.complain(WARNING):" << std::endl;
 	karen.complain("WARNING");
 
-	cout << "\nCalling Harl.complain(ERROR):" << endl;
+	std::cout << "\nCalling Harl.complain(ERROR):" << std::endl;
 	karen.complain("ERROR");
 }
