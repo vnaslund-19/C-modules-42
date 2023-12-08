@@ -6,11 +6,11 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 10:45:54 by vnaslund          #+#    #+#              #
-#    Updated: 2023/12/07 10:45:56 by vnaslund         ###   ########.fr        #
+#    Updated: 2023/12/08 17:28:28 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = conversions
 
 SOURCES = main.cpp Fixed.cpp
 
