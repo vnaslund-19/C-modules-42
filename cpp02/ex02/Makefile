@@ -6,11 +6,11 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 10:46:01 by vnaslund          #+#    #+#              #
-#    Updated: 2023/12/07 10:46:02 by vnaslund         ###   ########.fr        #
+#    Updated: 2023/12/08 18:34:30 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = operators
 
 SOURCES = main.cpp Fixed.cpp
 

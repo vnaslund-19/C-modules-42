@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 13:23:42 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/08 17:51:22 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/08 17:58:34 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,5 @@ class	Fixed
 };
 
 std::ostream & operator<<(std::ostream& out, Fixed const& obj);
-
 
 #endif
