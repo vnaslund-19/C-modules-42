@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 14:33:46 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/09 16:11:34 by vnaslund         ###   ########.fr       */
+/*   Created: 2023/12/09 16:24:48 by vnaslund          #+#    #+#             */
+/*   Updated: 2023/12/09 16:39:23 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "FragTrap.hpp"
 
-# include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
-	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		void	guardGate();
-};
+	std::cout << "FragTrap constructor called" << std::endl;
+}
 
-#endif
+FragTrap::~FragTrap(void)
+{
+	std::cout << "FragTrap destructor called" << std::endl;
+}
+
+void	FragTrap::highFivesGuys(void)
+{
+	std::cout << "ScavTrap " << _name << " wants to high five!" << std::endl;
+}
