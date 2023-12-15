@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 19:12:41 by vnaslund          #+#    #+#             */
-/*   Updated: 2023/12/04 18:31:50 by vnaslund         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:26:49 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(void)
 {
 	Phonebook	phonebook;
 	std::string	input;
-	int			i = 0;
 
 	std::cout << "Welcome to my phonebook\nValid commands are ADD, SEARCH & EXIT\n";
 	while (1)
