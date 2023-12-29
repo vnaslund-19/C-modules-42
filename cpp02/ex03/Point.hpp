@@ -13,8 +13,8 @@ class	Point
         ~Point();
 
         Point& operator=(const Point& other);
-        Fixed   Point::getX(void) const;
-        Fixed   Point::getY(void) const;
+        Fixed   getX(void) const;
+        Fixed   getY(void) const;
 
 	private:
         const Fixed _x;
