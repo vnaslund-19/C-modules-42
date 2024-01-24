@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 19:11:47 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:19:23 by vnaslund         ###   ########.fr       */
+/*   Created: 2024/01/24 18:28:35 by vnaslund          #+#    #+#             */
+/*   Updated: 2024/01/24 19:08:21 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef SHRUBBERYCREATIONSFORM_HPP
+# define SHRUBBERYCREATIONSFORM_HPP
 
+# include <fstream>
 # include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
 	public:
-		RobotomyRequestForm(std::string target);
-		~RobotomyRequestForm();
+		ShrubberyCreationForm(std::string target);
+		~ShrubberyCreationForm();
 		void	execute(const Bureaucrat &executor) const;
 
 	private:
 		const std::string	_target;
-		RobotomyRequestForm();
+		ShrubberyCreationForm();
 }
 
 #endif
