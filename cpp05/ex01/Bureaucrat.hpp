@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 16:46:40 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 17:52:10 by vnaslund         ###   ########.fr       */
+/*   Created: 2024/01/23 13:24:42 by vnaslund          #+#    #+#             */
+/*   Updated: 2024/01/24 17:44:35 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
 # include <iostream>
 
-class Bureaucrat;
+class Form;
 
-class Form
+class Bureaucrat
 {
 	public:
-		Form();
-		Form(std::string name, int signGrade, int execGrade);
-		~Form();
+		Bureaucrat();
+		Bureaucrat(std::string name, int grade);
+		~Bureaucrat();
 
 		std::string	getName(void) const;
-		int			getExecGrade(void) const;
-		int			getSignGrade(void) const;
-		bool		getSign(void) const;
-		void		beSigned(const Bureaucrat &bureaucrat);
+		int			getGrade(void) const;
+		void		incrementGrade(void);
+		void		decrementGrade(void);
+		void		signForm(Form &form);
 
 		class GradeTooHighException : public std::exception
 		{
@@ -44,12 +44,9 @@ class Form
 	
 	private:
 		const std::string	_name;
-		bool				_signed;
-		const int			_signGrade;
-		const int			_execGrade;
-
+		int					_grade;
 };
 
-std::ostream & operator<<(std::ostream & o, Form const &form);
+std::ostream & operator<<(std::ostream & o, Bureaucrat const &bureaucrat);
 
 #endif
