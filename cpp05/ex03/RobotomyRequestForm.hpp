@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Intern.hpp                                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 17:41:43 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/25 18:00:06 by vnaslund         ###   ########.fr       */
+/*   Created: 2024/01/24 19:11:47 by vnaslund          #+#    #+#             */
+/*   Updated: 2024/01/25 16:41:48 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERN_HPP
-# define INTERN_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include "AForm.hpp"
 
-class Intern
+class RobotomyRequestForm : public AForm
 {
 	public:
-		Intern();
-		~Intern();
-		AForm*	makeForm(std::string name, std::string target);
+		RobotomyRequestForm(std::string target);
+		~RobotomyRequestForm();
+		void	execute(const Bureaucrat &executor) const;
+
+	private:
+		const std::string	_target;
+		RobotomyRequestForm();
 };
 
 #endif

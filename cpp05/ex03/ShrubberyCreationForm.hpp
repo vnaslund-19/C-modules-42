@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Intern.hpp                                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 17:41:43 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/25 18:00:06 by vnaslund         ###   ########.fr       */
+/*   Created: 2024/01/24 18:28:35 by vnaslund          #+#    #+#             */
+/*   Updated: 2024/01/25 16:41:46 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERN_HPP
-# define INTERN_HPP
+#ifndef SHRUBBERYCREATIONSFORM_HPP
+# define SHRUBBERYCREATIONSFORM_HPP
 
+# include <fstream>
 # include "AForm.hpp"
 
-class Intern
+class ShrubberyCreationForm : public AForm
 {
 	public:
-		Intern();
-		~Intern();
-		AForm*	makeForm(std::string name, std::string target);
+		ShrubberyCreationForm(std::string target);
+		~ShrubberyCreationForm();
+		void	execute(const Bureaucrat &executor) const;
+
+	private:
+		const std::string	_target;
+		ShrubberyCreationForm();
 };
 
 #endif
