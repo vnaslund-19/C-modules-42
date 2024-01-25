@@ -6,7 +6,7 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 13:23:12 by vnaslund          #+#    #+#              #
-#    Updated: 2024/01/24 19:28:21 by vnaslund         ###   ########.fr        #
+#    Updated: 2024/01/25 16:58:59 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ clean:
 	rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) ShrubberyCreationForm_shrubbery
 
 re: fclean all
 

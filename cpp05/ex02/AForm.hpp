@@ -59,6 +59,6 @@ class AForm
 
 };
 
-std::ostream & operator<<(std::ostream & o, Form const &form);
+std::ostream & operator<<(std::ostream & o, AForm const &form);
 
 #endif

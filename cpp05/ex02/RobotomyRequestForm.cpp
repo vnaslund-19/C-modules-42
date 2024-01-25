@@ -6,11 +6,12 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:13:02 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:30:50 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:54:43 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include "Bureaucrat.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm()
 {
@@ -29,7 +30,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void	RobotomyRequestForm::execute(const Bureaucrat &executor) const
 {
-	if (this->getSigned() == false)
+	if (this->getSign() == false)
 		throw AForm::FormNotSignedException();
 	else if (executor.getGrade() > this->getExecGrade())
 		throw AForm::GradeTooLowException();

@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:19:27 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:20:01 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:41:57 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class PresidentialPardonForm : public AForm
 	private:
 		const std::string	_target;
 		PresidentialPardonForm();
-}
+};
 
 #endif

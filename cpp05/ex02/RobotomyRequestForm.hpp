@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:11:47 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:19:23 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:41:48 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class RobotomyRequestForm : public AForm
 	private:
 		const std::string	_target;
 		RobotomyRequestForm();
-}
+};
 
 #endif

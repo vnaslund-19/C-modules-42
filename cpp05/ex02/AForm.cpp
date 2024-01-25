@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:24:01 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:06:05 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:07:52 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ AForm::AForm(std::string name, int signGrade, int execGrade) : _name(name), _sig
 {
 	_signed = false;
 	if (signGrade < 1 || execGrade < 1)
-		throw Form::GradeTooHighException();
+		throw AForm::GradeTooHighException();
 	else if (signGrade > 150 || execGrade > 150)
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 }
 
 AForm::~AForm(void)
@@ -57,7 +57,7 @@ void	AForm::beSigned(const Bureaucrat &bureaucrat)
 	if (bureaucrat.getGrade() <= _signGrade)
 		_signed = true;
 	else
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 }
 
 const	char* AForm::GradeTooHighException::what() const throw()
@@ -67,17 +67,12 @@ const	char* AForm::GradeTooHighException::what() const throw()
 
 const	char* AForm::GradeTooLowException::what() const throw()
 {
-	return ("The grade is too low to be able to sign the form");
-}
-
-const	char* AForm::GradeTooLowException::what() const throw()
-{
-	return ("The grade is too low to be able to sign the form");
+	return ("the grade is too low");
 }
 
 const	char* AForm::FormNotSignedException::what() const throw()
 {
-	return ("The form is not signed");
+	return ("the form is not signed");
 }
 
 std::ostream &operator<<(std::ostream &o, AForm const &form)

@@ -6,12 +6,12 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:32:43 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:30:34 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:50:09 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(void)
 {
@@ -73,7 +73,7 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &bureaucrat)
 	return (o);
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
@@ -86,7 +86,8 @@ void	Bureaucrat::signForm(Form &form)
 	}
 }
 
-void    Bureaucrat::executeForm( const Form& form ) const {
+void    Bureaucrat::executeForm(const AForm& form) const
+{
     try {
         form.execute(*this); } 
 	catch ( std::exception& e ) {

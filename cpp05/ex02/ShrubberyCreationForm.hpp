@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:28:35 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:08:21 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:41:46 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ class ShrubberyCreationForm : public AForm
 	private:
 		const std::string	_target;
 		ShrubberyCreationForm();
-}
+};
 
 #endif

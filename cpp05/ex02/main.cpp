@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:24:36 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:28:29 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:08:17 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
 
     try 
 	{
-        Bureaucrat bureaucrat("ash", 2); // change grade to test errors
+        Bureaucrat bureaucrat("Test", 1); // change grade to test errors
         ShrubberyCreationForm form1("Shrubbery");
         RobotomyRequestForm form2("Robotomy");
         PresidentialPardonForm form3("President");

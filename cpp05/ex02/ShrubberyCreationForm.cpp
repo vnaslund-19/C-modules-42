@@ -6,11 +6,12 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:38:16 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/24 19:21:49 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:53:59 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include "Bureaucrat.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm()
 {
@@ -29,7 +30,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
-	if (this->getSigned() == false)
+	if (this->getSign() == false)
 		throw AForm::FormNotSignedException();
 	else if (executor.getGrade() > this->getExecGrade())
 		throw AForm::GradeTooLowException();
