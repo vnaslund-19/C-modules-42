@@ -7,6 +7,10 @@
 
 class Data;
 
+// reinterpret_cast does not check the 
+// safety or validity of the conversion at compile time or runtime; 
+// it simply reinterprets the bit pattern of the value as the new type. 
+
 class Serializer
 {
     public:
