@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = conversions
+NAME = convert
 
 SOURCES = main.cpp ScalarConverter.cpp
 

@@ -70,4 +70,47 @@ void	ScalarConverter::convert(const std::string& str)
 		toDouble = std::atof(str.c_str());
 		toFloat = static_cast<float>(toDouble);
 	}
+
+	for (int i = 0; i < 6; i++)
+	{
+		if (str == specialTypes[i])
+		{
+			toChar = "impossible";
+			break ;
+		}
+	}
+
+	if (toChar == "" && std::isprint(toInt))
+	{
+		toChar = "'";
+		toChar += static_cast<char>(toInt);
+		toChar += "'";
+	}
+	else if (toChar == "")
+		toChar = "Non displayable";
+
+	std::cout << "char: " << toChar << std::endl;
+	if (toChar == "impossible")
+		std::cout << "int: impossible" << std::endl;
+	else
+		std::cout << "int: " << toInt << std::endl;
+	
+	if (toChar == "impossible" && toFloat == 0)
+	{
+		std::cout << "float: imposible" << std::endl;
+		std::cout << "double: imposible" << std::endl;
+	}
+	else
+	{
+		if (toChar != "impossible" && toFloat - static_cast<int>(toFloat) == 0)
+		{
+			std::cout << "float: " << toFloat << ".0f" << std::endl;
+			std::cout << "double: " << toDouble << ".0" << std::endl;
+		}
+		else
+		{
+			std::cout << "float: " << toFloat << "f" << std::endl;
+			std::cout << "double: " << toDouble << std::endl;
+		}
+	}
 }
