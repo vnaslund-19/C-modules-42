@@ -1,8 +1,18 @@
-// Insert header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/29 15:57:53 by vnaslund          #+#    #+#             */
+/*   Updated: 2024/01/29 15:57:58 by vnaslund         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "easyfind.hpp"
 
-int main()
+int main(void)
 {
     int arr[] = {10, 20, 30, 40, 50};
     std::vector<int> myVector(arr, arr + sizeof(arr) / sizeof(arr[0]));
