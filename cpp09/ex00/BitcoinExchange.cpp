@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:19:11 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/30 16:51:46 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:42:23 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other)
 
 bool	BitcoinExchange::ValidValue(const std::string& value)
 {
-	int	res;
+	float	res;
 
 	try
 	{
 		res = std::stof(value);	
 	}
-	catch (const std::invalid_argument& e){
-		return(false);}
+	catch (const std::invalid_argument& e) { return false; }
+    catch (const std::out_of_range& e) { return false; }
 
 	if (res > 1000 || res < 0)
 		return (false);
@@ -78,11 +78,19 @@ bool	BitcoinExchange::ValidDate(const std::string& date)
 				return (false);
 			}
 		}
-		if (i == 1 || i == 2)
+		if (i == 1)
 		{
-			if (s.length() != 2 || !isNumeric(s))
+			if (s.length() != 2 || !isNumeric(s) || std::stoi(s) > 12)
 			{
-				std::cout << "Month or day has wrong format" << std::endl;
+				std::cout << "Month has wrong format" << std::endl;
+				return (false);
+			}
+		}
+		if (i == 2)
+		{
+			if (s.length() != 2 || !isNumeric(s) || std::stoi(s) > 31)
+			{
+				std::cout << "Day has wrong format" << std::endl;
 				return (false);
 			}
 		}
@@ -92,19 +100,30 @@ bool	BitcoinExchange::ValidDate(const std::string& date)
 	return (true);
 }
 
-void	readDataBase(std::ifstream& dataBase)
+void	BitcoinExchange::readDataBase(std::ifstream& dataBase)
 {
 	std::string line;
     size_t delim;
 
-    // skip first line
-    std::getline(dataBase, line);
+    std::getline(dataBase, line); // skip first line
     while (std::getline(dataBase, line))
     {
         delim = line.find(',');
         std::string rate = line.substr(delim + 1);
         // set a new pair on the map <date, rate>
-        this->_dataBase[line.substr(0, delim)] = ft_stof(rate);
+        this->_dataBase[line.substr(0, delim)] = std::stof(rate);
     }
-    Database.close();
+    dataBase.close();
 }
+
+float 	BitcoinExchange::getRateFromDataBase(const std::string& date)
+{
+	std::map<std::string, float>::iterator it = _dataBase.lower_bound(date);
+    if (it != _dataBase.end() && it->first == date)
+        return it->second;
+    if (it == _dataBase.begin())
+        return 0; // or some default rate, or handle error
+    --it;
+    return it->second;
+}
+

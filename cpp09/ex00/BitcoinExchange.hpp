@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:24:08 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/30 16:33:17 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:12:59 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class	BitcoinExchange
         ~BitcoinExchange(void);
 
 		void	readDataBase(std::ifstream& dataBase);
+		float 	getRateFromDataBase(const std::string& date);
 
 		bool 	ValidDate(const std::string& date);
 		bool 	ValidValue(const std::string& value);
