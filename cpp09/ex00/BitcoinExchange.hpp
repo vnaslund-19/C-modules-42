@@ -36,7 +36,7 @@ class	BitcoinExchange
 		bool 	ValidValue(const std::string& value);
 
 	private:
-		std::map<std::string, float> _dataBase;
-};
+		std::map<std::string, float> _dataBase; // Automatically sorts based on the keys ascii value
+};												// (string comparison)
 
 #endif

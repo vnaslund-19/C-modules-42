@@ -54,14 +54,14 @@ int	main(int argc, char **argv)
 		if (!btc.ValidDate(date))
 			continue ;
 
-		std::string	rate_str = line.substr(len + 2);
-		if (!btc.ValidValue(rate_str))
+		std::string	amount_str = line.substr(len + 2);
+		if (!btc.ValidValue(amount_str))
 			continue ;
 		
-		float rate = std::stof(rate_str);
+		float amount = std::stof(amount_str);
 
-		std::cout << date << " => " << rate << " = " << std::setprecision(2)
-				  << rate * btc.getRateFromDataBase(date) << std::endl;
+		std::cout << date << " => " << amount << " = " << std::setprecision(2)
+				  << amount * btc.getRateFromDataBase(date) << std::endl;
 	}
 	file.close();
 	database.close();
