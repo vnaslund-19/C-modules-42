@@ -118,14 +118,16 @@ void	BitcoinExchange::readDataBase(std::ifstream& dataBase)
 
 // it->first = key, it->second = value
 // lower_bound finds the value equal to the key or the closest lower value
-float 	BitcoinExchange::getRateFromDataBase(const std::string& date) 
+float BitcoinExchange::getRateFromDataBase(const std::string& date)
 {
-	std::map<std::string, float>::iterator it = _dataBase.lower_bound(date); 
-    if (it != _dataBase.end() && it->first == date)
-        return it->second;
-    if (it == _dataBase.begin())
-        return 0; // or some default rate, or handle error
-    --it;
-    return it->second;
+    if (_dataBase.empty())
+        return (0);
+    
+    auto it = _dataBase.lower_bound(date);
+    
+    if (it != _dataBase.begin() && (it == _dataBase.end() || it->first != date))
+        --it; // If not the first element and either past the last or no exact match, step back to the closest previous date.
+    
+    return it->second; // Return the rate of the exact or closest previous date. Calculated by lower_bound
 }
 
