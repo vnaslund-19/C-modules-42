@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:32:41 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/02/04 14:47:01 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 16:47:21 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ int	main(int argc, char **argv)
 			return (EXIT_FAILURE);
 		}
 	}
+	
 	PmergeMe	p;
+	
 	p.sortVector(argc, argv);
+	std::cout << std::endl;
+	p.sortList(argc, argv);
+
 	return (EXIT_SUCCESS);
 }
