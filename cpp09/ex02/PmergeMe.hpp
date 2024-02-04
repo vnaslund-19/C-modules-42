@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:32:48 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/02/03 19:01:55 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 14:53:52 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class PmergeMe
 		PmergeMe(const PmergeMe& other);
         PmergeMe&    operator=(const PmergeMe& other);
 
-		void	sortVector(int argc, char **argv);
+		void	sortVector(int argc, char **argv); // vector is an array with dynamic resizing
 		void	sortList(int argc, char **argv);
 
 		class InvalidArgument: public std::exception
