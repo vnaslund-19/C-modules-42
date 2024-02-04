@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 18:45:35 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/29 18:48:54 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 18:41:37 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,24 @@ int main(void)
     }
     std::cout << std::endl;
 
+	while (!mstack.empty()) 
+		mstack.pop();
+    std::cout << "Stack size after clearing: " << mstack.size() << std::endl;
+
+    // Testing swapping stacks
+    MutantStack<int> anotherStack;
+    anotherStack.push(100);
+    anotherStack.push(200);
+    mstack.swap(anotherStack);
+	
+	it = mstack.begin();
+    end = mstack.end();
+    std::cout << "Swapped stack elements: ";
+    while (it != end)
+	{
+        std::cout << *it << " ";
+        ++it;
+    }
+    std::cout << std::endl;
     return (0);
 }
