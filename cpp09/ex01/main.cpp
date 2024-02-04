@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:31:21 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/29 19:33:04 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:57:20 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
     if (argc != 2)
     {
-        std::cerr << "This program accepts exactly two arguments" << std::endl;
+        std::cerr << "This program accepts exactly 1 string argument containing an inverted Polish mathematical expression" << std::endl;
         return (EXIT_FAILURE);
     }
 

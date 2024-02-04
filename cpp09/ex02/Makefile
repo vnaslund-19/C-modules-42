@@ -6,7 +6,7 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/29 19:32:16 by vnaslund          #+#    #+#              #
-#    Updated: 2024/01/29 19:32:32 by vnaslund         ###   ########.fr        #
+#    Updated: 2024/02/04 13:48:57 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
+
+%.o: %.cpp
+	${CC} ${CFLAGS} -c $^ -o $@
 
 $(NAME): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)

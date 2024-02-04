@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:31:12 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/29 19:33:10 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:55:12 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ RPN::RPN(const RPN& other)
 
 RPN& RPN::operator=(const RPN& other)
 {
+	(void)other;
 	return (*this);
 }
 

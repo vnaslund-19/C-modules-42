@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:19:11 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/31 19:42:23 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:54:00 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ bool	BitcoinExchange::ValidDate(const std::string& date)
 	if (date.length() != 10)
 		return (false);
 
-	int					year, month, day;
 	std::string			s;
 	std::istringstream	ss(date);
 	int					i = 0;
@@ -123,7 +122,7 @@ float BitcoinExchange::getRateFromDataBase(const std::string& date)
     if (_dataBase.empty())
         return (0);
     
-    auto it = _dataBase.lower_bound(date);
+    std::map<std::string, float>::iterator it = _dataBase.lower_bound(date);
     
     if (it != _dataBase.begin() && (it == _dataBase.end() || it->first != date))
         --it; // If not the first element and either past the last or no exact match, step back to the closest previous date.
