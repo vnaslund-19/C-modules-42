@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:31:12 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/02/04 13:55:12 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 17:19:40 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ long long   RPN::calc(const std::string& str)
     int                 right;
     int                 result;
     std::stringstream   postfix(str);
-    std::stack<int>     stack;
+    std::stack<int>     stack; // stack makes sense for RPN as you can easily know what operation to do when you encounter an +-*/ on the stack
     std::string         token;
 
     while (postfix >> token) // puts token into i (tokens are determined by whitespace separation)

@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:32:45 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/02/04 17:04:20 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 17:11:25 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,9 +212,4 @@ static std::list<unsigned int>	mergeLists(std::list<unsigned int>& left, std::li
 	}
 	
 	return (result);
-}
-
-const char*	PmergeMe::InvalidArgument::what() const throw()
-{
-	return ("PmergeMe exception: invalid argument");
 }

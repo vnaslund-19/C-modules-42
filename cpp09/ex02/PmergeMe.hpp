@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:32:48 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/02/04 16:32:38 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 17:13:16 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,8 @@ class PmergeMe
 
 		void	sortVector(int argc, char **argv); // vector is an array with dynamic resizing
 		void	sortList(int argc, char **argv); // std::list == doubly linked list
-
-		class InvalidArgument: public std::exception
-		{
-			public:
-				virtual const char* what() const throw();
-		};
+		// Sorting using a vector container is faster than in a list because
+		// to access a list element you have to traverse the lists pointers
 };
 
 #endif
