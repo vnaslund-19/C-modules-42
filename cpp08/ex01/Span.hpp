@@ -6,7 +6,7 @@
 /*   By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:20:53 by vnaslund          #+#    #+#             */
-/*   Updated: 2024/01/29 18:03:12 by vnaslund         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:47:07 by vnaslund         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class Span
 	private:
 		Span();
 		std::vector<int>	_vector;
-		int					_size;
+		unsigned long		_size;
 };
 
 #endif
